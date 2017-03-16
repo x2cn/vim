@@ -67,24 +67,27 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 " let g:airline#extensions#whitespace#symbol = '!'
 " 底部tabline显示方式
 set laststatus=2
-set statusline=
-set statusline=%<%f\                     " Filename
-set statusline+=%w%h%m%r                 " Options
-set statusline+=\ [%{&ff}/%Y]            " Filetype
-set statusline+=\ [%{getcwd()}]          " Current dir
-set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+"set statusline=
+"set statusline=%<%f\                     " Filename
+"set statusline+=%w%h%m%r                 " Options
+"set statusline+=\ [%{&ff}/%Y]            " Filetype
+"set statusline+=\ [%{getcwd()}]          " Current dir
+"set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 
-" set statusline=  
-" set statusline+=%7*\[%n]                                  "buffernr  
-" set statusline+=%1*\ %<%F\                                "文件路径  
-" set statusline+=%2*\ %y\                                  "文件类型  
-" set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}      "编码1  
-" set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\            "编码2  
-" set statusline+=%4*\ %{&ff}\                              "文件系统(dos/unix..)   
-" set statusline+=%5*\ %{&spelllang}\%{HighlightSearch()}\  "语言 & 是否高亮，H表示高亮?  
-" set statusline+=%8*\ %=\ row:%l/%L\ (%03p%%)\             "光标所在行号/总行数 (百分比)  
-" set statusline+=%9*\ col:%03c\                            "光标所在列  
-" set statusline+=%0*\ \ %m%r%w\ %P\ \                      "Modified? Read only? Top/bottom 
+"set statusline=  
+"set statusline+=%7*\[%n]                                  "buffernr  
+"set statusline+=%1*\ %<%F\                                "文件路径  
+"set statusline+=%2*\ %y\                                  "文件类型  
+"set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}      "编码1  
+"set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\            "编码2  
+"set statusline+=%4*\ %{&ff}\                              "文件系统(dos/unix..)   
+"set statusline+=%5*\ %{&spelllang}\%{HighlightSearch()}\  "语言 & 是否高亮，H表示高亮?  
+"set statusline+=%8*\ %=\ row:%l/%L\ (%03p%%)\             "光标所在行号/总行数 (百分比)  
+"set statusline+=%9*\ col:%03c\                            "光标所在列  
+"set statusline+=%0*\ \ %m%r%w\ %P\ \                      "Modified? Read only? Top/bottom 
+" 使用gt命令可以切换到下一个tab，使用gT命令可以切换到前一个tab
+" 可以使用:tabs查看所有tab的列表，然后输入ngt命令切换到对应的tab，其中n是tab的编号
+" 使用:tabc命令关闭当前tab
 
 map <F3> :TagbarToggle<CR>
 " let Tlist_Use_Right_Window=1
