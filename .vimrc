@@ -37,6 +37,7 @@ set t_Co=256
 colorscheme molokai
 if has("autocmd")
     autocmd FileType go setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+    autocmd FileType proto setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
     autocmd FileType python setlocal tabstop=4 sts=4 shiftwidth=4 expandtab
 endif
 
@@ -49,6 +50,8 @@ set hlsearch " 高亮搜索
 set scrolloff=15   " 光标移动到buffer的顶部和底部时保持10行距离
 " set nobackup " 不要备份文件
 set noerrorbells " 发生错误时不滴滴响
+" 关闭保存自动格式化功能 
+let g:go_fmt_autosave = 0
 
 " vim-ariline
 " let g:airline_theme="molokai" 
@@ -117,9 +120,26 @@ let NERDTreeWinSize=25
 " P	转到根目录
 " q	关闭窗口
 "
+" tab替换空格
+" :set ts=4
+" :set expandtab
+" :%retab!
+" 空格替换tab
+" :set ts=4
+" :set noexpandtab
+" :%retab!
+map <F5> :%retab!<CR>
 
-
-
+"<k0> - <k9> 小键盘 0 到 9 
+"<S-...> Shift＋键 
+"<C-...> Control＋键 
+"<M-...> Alt＋键 或 meta＋键 
+"<A-...> 同 <M-...> 
+"<Esc> Escape 键 
+"<Up> 光标上移键 
+"<Space> 插入空格 
+"<Tab> 插入Tab 
+"<CR> 等于<Enter>
 
 
 
