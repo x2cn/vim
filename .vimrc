@@ -129,6 +129,7 @@ let NERDTreeWinSize=25
 " :set noexpandtab
 " :%retab!
 map <F5> :%retab!<CR>
+map <F6> :syntax off<CR>
 
 "<k0> - <k9> 小键盘 0 到 9 
 "<S-...> Shift＋键 
